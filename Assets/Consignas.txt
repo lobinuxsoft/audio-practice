@@ -1,0 +1,15 @@
+Paso 1:
+
+Construir pasillo en el cual un personaje (pelotita con rigidbody, camara fps, character controller) se mueve hacia adelante y hacia atrás.
+
+Agregar fuentes de audio (audio sources) a lo largo del pasillo.
+
+Con una tecla o con un control de UI para activar/desactivar audios: AudioListener.volume = 0; o = 1;
+
+Triggers que activan checkpoints que debe ser punto de inicio del usuario en próximas ejecuciones del juego.
+
+Paso 2:
+
+Separar SFX de Música y tengan 2 controles de volumen que se guardan en PlayerPrefs (se guarda el volumen seteado para cada uno).
+
+Hacer que el jugador se mueva más libremente y que se guarde la posición en que quedó y no solo el checkpoint.
