@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(GroundDetector))]
@@ -12,7 +13,10 @@ public class BallMovement : MonoBehaviour
     private Camera cam;
 
     private Vector3 inputDir = Vector3.zero;
-    
+
+    Vector3 forward;
+    Vector3 right;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -25,13 +29,8 @@ public class BallMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 forward = cam.transform.forward;
-        forward.y = 0;
-        forward.Normalize();
-        
-        Vector3 right = cam.transform.right;
-        right.y = 0;
-        right.Normalize();
+        forward = Vector3.ProjectOnPlane(cam.transform.forward, Vector3.up);
+        right = Vector3.ProjectOnPlane(cam.transform.right, Vector3.up);
 
         inputDir = Vector3.ClampMagnitude(forward * -Input.GetAxis("Horizontal") + right * Input.GetAxis("Vertical"), 1f);
         
@@ -47,5 +46,29 @@ public class BallMovement : MonoBehaviour
         body.maxAngularVelocity = maxAngularVelocity;
         
         body.AddTorque( torqueSpeed * inputDir, ForceMode.VelocityChange);
+    }
+
+    private void OnDrawGizmos()
+    {
+        if(!body) body = GetComponent<Rigidbody>();
+
+        Handles.color = Color.yellow;
+        Handles.CircleHandleCap(0, transform.position, Quaternion.LookRotation(Vector3.up), 1f, EventType.Repaint);
+
+        
+
+        Handles.color = Color.blue;
+        Handles.SphereHandleCap(0, transform.position + forward, Quaternion.identity, .25f, EventType.Repaint);
+
+
+        Handles.color = Color.red;
+        Handles.SphereHandleCap(0, transform.position + right, Quaternion.identity, .25f, EventType.Repaint);
+
+
+        Handles.color = Color.cyan;
+        Handles.ArrowHandleCap(0, transform.position, Quaternion.LookRotation(body.velocity), Vector3.ClampMagnitude(body.velocity, 1).magnitude, EventType.Repaint);
+        Handles.DrawWireArc(transform.position, Vector3.up, forward, Vector3.SignedAngle(forward, body.velocity, Vector3.up), Vector3.ClampMagnitude(body.velocity, 1).magnitude);
+        Handles.color = new Color(Color.cyan.r, Color.cyan.g, Color.cyan.b, .25f);
+        Handles.DrawSolidArc(transform.position, Vector3.up, forward, Vector3.SignedAngle(forward, body.velocity, Vector3.up), Vector3.ClampMagnitude(body.velocity, 1).magnitude);
     }
 }
