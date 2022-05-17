@@ -1,11 +1,11 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider))]
 public class CheckPointTrigger : MonoBehaviour
 {
-    private const string keyName = "CheckPoint";
-    [SerializeField] private int checkPointID;
+    [SerializeField] private UnityEvent<Vector3> onTriggerCheckPoint;
     
     private BoxCollider box;
 
@@ -13,21 +13,13 @@ public class CheckPointTrigger : MonoBehaviour
     {
         box = GetComponent<BoxCollider>();
         box.isTrigger = true;
-
-        if (PlayerPrefs.HasKey(keyName))
-        {
-            if (PlayerPrefs.GetInt(keyName) == checkPointID)
-            {
-                GameObject.FindWithTag("Player").transform.position = transform.position;
-            }
-        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            PlayerPrefs.SetInt(keyName, checkPointID);
+            onTriggerCheckPoint?.Invoke(other.attachedRigidbody.position);
         }
     }
 
@@ -50,7 +42,7 @@ public class CheckPointTrigger : MonoBehaviour
         Gizmos.DrawWireCube(box.center, box.size);
         Gizmos.color = new Color(gizmoColor.r, gizmoColor.g, gizmoColor.b, .25f);
         Gizmos.DrawCube(box.center, box.size);
-        string text = $"<color=#{ColorUtility.ToHtmlStringRGB(gizmoColor)}><b>{keyName} {checkPointID}</b></color>";
+        string text = $"<color=#{ColorUtility.ToHtmlStringRGB(gizmoColor)}><b>{gameObject.name}</b></color>";
         Handles.matrix = transform.localToWorldMatrix;
         Handles.Label(box.center, text, labelStyle);
     }

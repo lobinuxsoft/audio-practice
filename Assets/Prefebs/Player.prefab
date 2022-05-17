@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 917629723669636449}
   - component: {fileID: 917629723669636448}
   - component: {fileID: 917629723669636451}
+  - component: {fileID: 1208986297678550500}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -144,3 +145,17 @@ MonoBehaviour:
   torqueSpeed: 180
   jumpSpeed: 12
   maxAngularVelocity: 180
+--- !u!114 &1208986297678550500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917629723669636462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d68f4787f8219f418f24228cf37ac22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadOnStart: 1
+  lastPos: {fileID: 11400000, guid: 961690a8e1248c646af01cd70212a9e6, type: 2}
