@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 917629723669636449}
   - component: {fileID: 917629723669636448}
   - component: {fileID: 917629723669636451}
-  - component: {fileID: 1208986297678550500}
+  - component: {fileID: 7200797660371875886}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -145,7 +145,7 @@ MonoBehaviour:
   torqueSpeed: 180
   jumpSpeed: 12
   maxAngularVelocity: 180
---- !u!114 &1208986297678550500
+--- !u!114 &7200797660371875886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 917629723669636462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d68f4787f8219f418f24228cf37ac22, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d23660b7cc048c4cb3b10415b666115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loadOnStart: 1

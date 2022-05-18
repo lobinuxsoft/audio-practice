@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PlayerPosition
   m_EditorClassIdentifier: 
   value:
-    x: 0
-    y: 2.486076
-    z: 0
+    x: -2.5724149
+    y: 1
+    z: 27.65398
   redeableFile: 1
   fileExtention: .save

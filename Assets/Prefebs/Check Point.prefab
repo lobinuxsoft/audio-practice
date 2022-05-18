@@ -62,8 +62,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 961690a8e1248c646af01cd70212a9e6, type: 2}
-        m_TargetAssemblyTypeName: Vector3Variable, Assembly-CSharp
-        m_MethodName: SetValue
+        m_TargetAssemblyTypeName: CryingOnionTools.ScriptableVariables.ScriptableVariable`1[[UnityEngine.Vector3,
+          UnityEngine
+        m_MethodName: set_Value
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
