@@ -1,0 +1,15 @@
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\bin\Debug\net6.0\TextWriter.exe
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\bin\Debug\net6.0\TextWriter.deps.json
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\bin\Debug\net6.0\TextWriter.runtimeconfig.json
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\bin\Debug\net6.0\TextWriter.dll
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\bin\Debug\net6.0\TextWriter.pdb
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\obj\Debug\net6.0\TextWriter.csproj.AssemblyReference.cache
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\obj\Debug\net6.0\TextWriter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\obj\Debug\net6.0\TextWriter.AssemblyInfoInputs.cache
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\obj\Debug\net6.0\TextWriter.AssemblyInfo.cs
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\obj\Debug\net6.0\TextWriter.csproj.CoreCompileInputs.cache
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\obj\Debug\net6.0\TextWriter.dll
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\obj\Debug\net6.0\refint\TextWriter.dll
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\obj\Debug\net6.0\TextWriter.pdb
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\obj\Debug\net6.0\TextWriter.genruntimeconfig.cache
+C:\Users\theda\OneDrive\Documentos\Repositories\audio-practice\TextWriter\obj\Debug\net6.0\ref\TextWriter.dll
