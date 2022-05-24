@@ -1,4 +1,7 @@
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
+
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(GroundDetector))]
@@ -48,14 +51,15 @@ public class BallMovement : MonoBehaviour
         body.AddTorque( torqueSpeed * inputDir, ForceMode.VelocityChange);
     }
 
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
-        if(!body) body = GetComponent<Rigidbody>();
+        if (!body) body = GetComponent<Rigidbody>();
 
         Handles.color = Color.yellow;
         Handles.CircleHandleCap(0, transform.position, Quaternion.LookRotation(Vector3.up), 1f, EventType.Repaint);
 
-        
+
 
         Handles.color = Color.blue;
         Handles.SphereHandleCap(0, transform.position + forward, Quaternion.identity, .25f, EventType.Repaint);
@@ -71,4 +75,5 @@ public class BallMovement : MonoBehaviour
         Handles.color = new Color(Color.cyan.r, Color.cyan.g, Color.cyan.b, .25f);
         Handles.DrawSolidArc(transform.position, Vector3.up, forward, Vector3.SignedAngle(forward, body.velocity, Vector3.up), Vector3.ClampMagnitude(body.velocity, 1).magnitude);
     }
+#endif
 }
